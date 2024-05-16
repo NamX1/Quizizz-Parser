@@ -34,7 +34,7 @@ func removeHTMLTags(text string) string {
 	text = strings.ReplaceAll(text, "<br>", "\n")
 	re := regexp.MustCompile(`<[^>]*>`)
 	text = re.ReplaceAllString(text, "")
-	text = strings.ReplaceAll(text, "&nbsp;", " ")
+	text = strings.ReplaceAll(text, "&nbsp;", "")
 	return text
 }
 
@@ -64,7 +64,7 @@ func getAnswer(id string) {
 		nomor := i + 1
 		questionText := removeHTMLTags(question.Structure.Query.Text)
 		answer := removeHTMLTags(question.Structure.Options[question.Structure.Answer].Text)
-		wow += fmt.Sprintf("%d. %s\nAnswer: %s\n\n", nomor, questionText, answer)
+		wow += fmt.Sprintf("%d. %s\n\nAnswer: %s\n\n", nomor, questionText, answer)
 	}
 	fmt.Println(wow)
 }
