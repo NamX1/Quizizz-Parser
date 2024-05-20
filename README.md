@@ -14,4 +14,4 @@ Thanks to @galviy for the idea
 6. cd Quizizz-Parser
 7. go run main.go (Quiz ID)
    
-> Dont Forget To Give A Star To This Repo
+# Dont Forget To Give A Star To This Repo
